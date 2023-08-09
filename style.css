@@ -1,0 +1,344 @@
+/* Reset some default styles */
+
+/*Type Selector:*/
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    line-height: 1.6;
+    background-image: url('/assets/background\ image.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+}
+
+/* Navigation styles */
+nav {
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 1 1 1 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Style the navigation list */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style navigation list items */
+nav li {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* Style navigation links */
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+/* Define a fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Define a color change animation */
+@keyframes changeColor {
+    0%, 100% { color: #fff; }
+    50% { color: #df1fbc; }
+}
+
+/* Define a stronger glow animation */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+    50% { text-shadow: 0 0 30px rgba(217, 42, 220, 0.9); }
+}
+
+/* Apply the stronger glow animation to headings */
+h1, h2, h3 {
+    animation: glow 3s infinite alternate;
+}
+
+/* Tablet and Desktop Styles */
+
+/* Media query for tablets and larger screens */
+@media screen and (min-width: 768px) {
+    /* Header styles for tablets and larger screens */
+    header {
+        padding: 100px 0;
+    }
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+    animation: fadeIn 1s ease-in-out, changeColor 4s infinite;
+}
+
+/* Class Selector*/
+.myinfo {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+h1 {
+    margin-top: 5rem; 
+    margin-bottom: 0;
+    margin-right: 75rem;
+}
+
+.myinfo p {
+    margin-top: 0;
+}
+
+
+/* Add a cat smiley face */
+.cat-smiley {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+/* Define a heart beat animation */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.image-container {
+    margin-left: auto;
+    text-align: right;
+}
+
+img {
+    max-width: 250px; 
+    width: 100%; 
+    height: auto;
+    border-radius: 10%;
+    border: 10px solid pink;
+}
+
+p {
+    font-size: 25px;
+    color: #f6f1f1;
+    line-height: 50px;
+}
+
+section {
+    margin: 50px 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none; 
+}
+
+section:target {
+    display: block;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ee1414;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* Define a slide-up animation */
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Styling for the "Skills" section */
+.skills {
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+.skills h1 {
+    color: rgb(33, 207, 234);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.skills .box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -1.2rem;
+}
+
+.skills .box-container .box {
+    flex: 0 0 22rem; 
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 1.9rem;
+    background-image: url('/assets/skills\ img\ 2.png'); 
+    background-size: cover;
+    background-position: center;
+    color: rgb(100, 40, 205);
+    font-size: 2rem;
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+.skills .box-container .box p {
+    font-size: 1.6rem;
+    color: white; 
+    padding: 2rem 0;
+    line-height: 1.8;
+    animation: fadeIn 1.5s ease-in-out; 
+}
+
+/* Styling for the "Projects" section */
+.project {
+    text-align: center;
+    padding: 100px 0;
+    animation: slideUp 1.5s ease-in-out; 
+}
+
+.project h1 {
+    font-size: 2rem;
+    color: rgb(30, 184, 208);
+    margin-bottom: 2rem;
+}
+
+.project .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30rem, 1fr)); 
+    gap: 2rem;
+    background-color: rgb(248, 80, 222);
+    animation: slideUp 1.5s ease-in-out; 
+}
+
+.project .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 1.9rem;
+    background-size: cover;
+    background-position: center;
+    color: #0e0d0d;
+    font-size: 2rem;
+    animation: slideUp 1.5s ease-in-out; 
+}
+
+.project .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: black;
+    padding: 2rem 0;
+    animation: slideUp 1.5s ease-in-out; 
+}
+
+/* Styling for the "Contact" section */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-image: url('/assets/contact\ img.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #eeeaea;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--black);
+    border: var(--border);
+}
+
+.contact .row form .inputBox span {
+    color: #f0ebeb;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+/* Descendant Selector:*/
+.contact .row form .inputBox input {
+    width: 400px;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #f4eeee;
+    text-transform: none;
+    background: none;
+}
+
+/* Button styles */
+
+/* ID Selector:*/
+#myButton1 {
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+/* Media query for larger desktop screens */
+@media screen and (min-width: 1200px) {
+
+}
+
+#myButton1:hover {
+    background-color: #ff9999; 
+}
+
+.btn {
+    padding: 6px 20px; 
+    font-size: 18px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+    background-color: rgb(185, 143, 185);
+}
+
+
